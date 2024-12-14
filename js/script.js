@@ -74,5 +74,4 @@ function filterTasks(filter) {
     renderTasks(filter);
 }
 
-// Initial render
 renderTasks();
