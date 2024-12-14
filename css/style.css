@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+h1 {
+    color: #4caf50;
+}
+.task-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin: 5px 0;
+    background: #e8f5e9;
+    border-radius: 4px;
+    animation: fadeIn 0.3s;
+}
+.task.completed {
+    text-decoration: line-through;
+    background: #c8e6c9;
+    animation: completeTask 0.5s;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.circle.completed {
+    background-color: #4caf50;
+    color: white;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes completeTask {
+    0% { transform: scale(1); background-color: #e8f5e9; }
+    50% { transform: scale(1.1); background-color: #a5d6a7; }
+    100% { transform: scale(1); background-color: #c8e6c9; }
+}
+.filter-buttons button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.filter-buttons button.active {
+    background-color: #4caf50;
+    color: #fff;
+}
